@@ -14,7 +14,6 @@ import RoomContext from "../../contexts/RoomContext";
 import UserContext from "../../contexts/UserContext";
 import { URL_HISTORY_SVC } from "../../configs";
 import axios from "axios";
-import CircularProgress from "@mui/material/CircularProgress";
 import peerprep from "./../../logos/peerprep.png";
 
 function Dashboard() {

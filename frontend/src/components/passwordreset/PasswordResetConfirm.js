@@ -49,15 +49,39 @@ const PasswordResetConfirm = () => {
 
   return (
     <Box className="mainBox">
-      <Paper elevation={5} sx={{width: "50vw", height: "85vh", backgroundColor: "#3B4252"}}>
-        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", width: "100%"}}>
+      <Paper
+        elevation={5}
+        sx={{ width: "50vw", height: "85vh", backgroundColor: "#3B4252" }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+            width: "100%",
+          }}
+        >
           <Box className="signInBox">
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "2rem" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginBottom: "2rem",
+              }}
+            >
               <Box sx={{ marginRight: "3%" }}>
-                <img src={peerprep} height={"50px"} width={"50px"} alt="PeerPrep logo" />
+                <img
+                  src={peerprep}
+                  height={"50px"}
+                  width={"50px"}
+                  alt="PeerPrep logo"
+                />
               </Box>
               {/* <a href="https://www.flaticon.com/free-icons/hands-and-gestures" title="hands and gestures icons">Hands and gestures icons created by Andrejs Kirma - Flaticon</a> */}
-              <Typography variant={"h2"} >PeerPrep</Typography>
+              <Typography variant={"h2"}>PeerPrep</Typography>
             </Box>
             <Typography
               variant="h3"
@@ -70,7 +94,9 @@ const PasswordResetConfirm = () => {
           </Box>
           {hasResetPassword ? (
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Typography>Your password has successfully been reset!</Typography>
+              <Typography>
+                Your password has successfully been reset!
+              </Typography>
               <Button
                 variant={"contained"}
                 color={"secondary"}

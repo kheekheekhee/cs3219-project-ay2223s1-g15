@@ -32,7 +32,7 @@ function MatchingPage() {
   useEffect(() => {
     if (!difficulty || !user) {
       navigate("/dashboard", { replace: true }); // if access this screen directly rather than from dashboard
-      return
+      return;
     }
     console.log("match event sent");
     matchingSocket.emit("match", user, difficulty);
@@ -41,9 +41,9 @@ function MatchingPage() {
   useEffect(() => {
     if (!difficulty || !user) {
       navigate("/dashboard", { replace: true }); // if access this screen directly rather than from dashboard
-      return
+      return;
     }
-    console.log('match success tracking')
+    console.log("match success tracking");
     matchingSocket.on("matchFail", () => {
       console.log("matchfail");
       setIsMatchFail(true);

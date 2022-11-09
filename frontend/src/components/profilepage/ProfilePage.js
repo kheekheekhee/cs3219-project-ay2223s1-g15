@@ -62,7 +62,6 @@ const ProfilePage = () => {
             className="avatarButton"
             src={imageUrl}
             width={500}
-            
           />
           <Button
             className="editAvatarButton"

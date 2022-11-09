@@ -170,6 +170,20 @@ function BasicTab({ output, inCall }) {
                     </Box>
                   );
                 })}
+              <Divider textAlign="left">Constraints</Divider>
+              {question &&
+                Object.keys(question).length !== 0 &&
+                Object.keys(question.constraint).map((constraints, index) => {
+                  return (
+                    <Box key={index}>
+                      <Typography>Constraint {index + 1}:</Typography>
+                      <Typography>
+                        {question.constraint[constraints]}
+                      </Typography>
+                      <br />
+                    </Box>
+                  );
+                })}
             </>
           }
           value={value}

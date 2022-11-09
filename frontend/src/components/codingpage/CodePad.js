@@ -98,7 +98,7 @@ function CodePad({ currentLanguage, setOutput }) {
       <CodeMirror
         value={code}
         theme={githubDark}
-        height={'80vh'}
+        height={"80vh"}
         extensions={[loadLanguage(currentLanguage)]}
         initialState={
           serializedState
@@ -122,9 +122,9 @@ function CodePad({ currentLanguage, setOutput }) {
         marginTop={"1rem"}
       >
         <Box className="endTurnBox">
-        {isEndTurnConfirm ? (
-          <>
-            {/* <Button
+          {isEndTurnConfirm ? (
+            <>
+              {/* <Button
               variant="outlined"
               color="error"
               onClick={handleEndTurnConfirmCancel}
@@ -138,26 +138,31 @@ function CodePad({ currentLanguage, setOutput }) {
                 sx={{ marginRight: "2%" }}
               />
               <Typography>Swapping roles...</Typography>
-          </>
-        ) : (
-          <>
-            <Button variant="outlined" color="error" sx={{marginRight: "2%"}} onClick={handleEndTurn}>
-              Swap roles
-            </Button>
-            <Typography>You are the: {role}</Typography>
-          </>
-        )}
-      </Box>
-      <ConfirmationDialog
-        className="endTurnButtonDialog"
-        open={isEndTurn}
-        close={handleEndTurnCancel}
-        confirm={handleEndTurnConfirm}
-        title={"End turn"}
-        body={"Are you sure you want to end your turn?"}
-        accept={"Accept"}
-        decline={"Decline"}
-      />
+            </>
+          ) : (
+            <>
+              <Button
+                variant="outlined"
+                color="error"
+                sx={{ marginRight: "2%" }}
+                onClick={handleEndTurn}
+              >
+                Swap roles
+              </Button>
+              <Typography>You are the: {role}</Typography>
+            </>
+          )}
+        </Box>
+        <ConfirmationDialog
+          className="endTurnButtonDialog"
+          open={isEndTurn}
+          close={handleEndTurnCancel}
+          confirm={handleEndTurnConfirm}
+          title={"End turn"}
+          body={"Are you sure you want to end your turn?"}
+          accept={"Accept"}
+          decline={"Decline"}
+        />
         <Button variant={"contained"} color={"secondary"} onClick={submitCode}>
           Run code
         </Button>
